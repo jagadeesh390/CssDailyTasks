@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Architects</title>
+    <link rel="stylesheet" href="Task8.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+html, body {
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.navbar {
+    background-color: white;
+    height: 20vh;
+    position: relative;
+}
+.nav1:hover{
+    background-color: #dcdcdc;
+    color: black;
+    margin: 5px;
+}
+.nav2 a:hover{
+    background-color: #dcdcdc;
+    color: rgb(56, 52, 52);
+    padding: 10px;
+    padding-top: 5px;
+}
+
+.nav1 {
+    position: absolute;
+    top: 20%;
+    letter-spacing: 4px;
+    line-height: 1.2;
+    padding-left: 35px;
+}
+
+.nav2 {
+    position: absolute;
+    right: 0;
+    top: 10%;
+    padding: 10px;
+}
+
+a {
+    display: inline;
+    justify-content: space-between;
+    padding: 30px;
+    letter-spacing: 4px;
+    line-height: 1.2;
+    text-decoration: none;
+    color: black;
+}
+
+span {
+    font-weight: bolder;
+    color: black;
+}
+
+.heroimage {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Reduce height for less space */
+    background-image: url(https://www.w3schools.com/w3images/architect.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: -70px; /* Remove extra space below navbar */
+}
+#br{
+    font-weight: bolder;
+    color: white;
+    background-color: black;
+    padding: 15px 10px;
+}
+
+section {
+    padding-top: 0;
+    margin: 0 auto;
+}
+.herotext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    color: white;
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: 4px;
+    line-height: 1.2;
+    font-family: "Segoe UI", Arial, sans-serif;
+    opacity: 0.75;
+}
+#projects{
+    padding: 40px 20px;
+    text-align: left;
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    
+}
+.projectline{
+    width: 100%;
+    height: 2px;
+    background-color: 0;
+    margin: 20px 0;
+}
+.projectimages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: "Segoe UI", Arial, sans-serif;
+
+}
+.projectimages .project{
+    display: inline-block;
+    position: relative;
+    width: 23%;
+    margin: 10px 1%;
+    
+}
+.projectimages .project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.projectimages .project .projectname{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+    color: white;
+    padding: 6px 11px;
+    border-radius: 0px; 
+    font-family: "Segoe UI", Arial, sans-serif;
+
+
+}
+#about .aboutcontainer{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+.profile{
+    display: inline-block;
+    text-align: center;
+    width: 23%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+.profile img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.profileinfo{
+    padding-top: 12px;
+}
+.profileinfo h3,
+.profileinfo .profiletitle,
+.profileinfo .profiledescription {
+    margin: 0px 0;
+}
+.profileinfo h3{
+    font-size: 22px;
+    text-align: left;
+    text-indent: 1px;
+    margin-bottom: 15px;
+}
+.profiletitle {
+    font-size: 14px;
+    color: rgb(96, 96, 96);
+    text-align: left;
+    margin-bottom: 15px; 
+    display: block;
+}
+.profiledescription {
+    font-size: 14px;
+    text-align: left;
+    padding-top: 0px;
+    margin-top: 20px; 
+    display: block; 
+    margin-bottom: 15px; 
+}
+p {
+    
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    text-align: justify;
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: medium;
+}
+.Contactbutton{
+    width: 100%;
+    background-color: #dcdcdc;
+    color: black;
+    border: none;
+    padding: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.Contactbutton {
+    width: 100%;
+    background-color: #dcdcdc;
+    color: black;
+    border: none;
+    padding: 5px 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.Contactbutton:hover {
+    background-color: #bfbfbf;
+}
+
+.contactsection {
+    margin: 40px 0;
+}
+
+.contactsection h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contactsection p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+    margin-left: 20px;
+    margin-left: 20px;
+}
+
+.contactm {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.contactm input,
+.contactm textarea {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.contactm textarea {
+    resize: none;
+}
+
+.contactm button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 1px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 10%;
+}
+
+.contactm button:hover {
+    background-color: #333;
+}
+
+#img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.footer {
+    background-color: black;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+
+.footer p {
+    color: white;
+    text-align: center;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+ @media screen and (width<576px) {
+    .hero-text {
+        font-size: 18px;
+    }
+    .heroimage{
+        width: 100%;
+        flex-direction: column;
+    }
+    .projectimages{
+        width: 100%;
+        flex-direction: column;
+    }
+    .aboutcontainer{
+        width: 100%;
+        flex-direction: column;
+    }
+    #img{
+        width: 80%;
+        flex-direction: column;
+    }
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 16px;
+    }
+
+    .contact-button {
+        width: 100%;
+    }
+    .contactm input,
+.contactm textarea {
+    width: 90%;
+    padding: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #090707;
+    border-radius: 1px;
+    font-size: 16px;
+    overflow: hidden;
+    row-gap: 10%;
+}
+}
+    </style>
+</head>
+<body>
+        <div class="navbar">
+            <div class="nav1"><span>BR </span>Architects</div>
+            <div class="nav2">
+                    <a href="#projects">Projects</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+            </div>
+
+
+
+        </div>
+        <section>
+            <div id="hero" class="heroimage">
+                <div class="herotext"><span id="br">BR </span> Architects</div>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projectline">
+                <hr>
+            </div>
+            <div class="projectimages">
+                <div class="project">
+                    <img src="https://www.w3schools.com/w3images/house5.jpg" alt="project1">
+                    <div class="projectname">Summer House</div>
+                </div>
+                <div class="project">
+                    <img src="https://www.w3schools.com/w3images/house2.jpg" alt="project2">
+                    <div class="projectname">Brick House</div>
+                </div>
+                <div class="project">
+                    <img src="https://www.w3schools.com/w3images/house3.jpg" alt="project3">
+                    <div class="projectname">Renovated House</div>
+                </div>
+                <div class="project">
+                    <img src="https://www.w3schools.com/w3images/house4.jpg" alt="project4">
+                    <div class="projectname">Barn House</div>
+                </div>
+                <div class="project">
+                    <img src="https://www.w3schools.com/w3images/house2.jpg" alt="project5">
+                    <div class="projectname">Summer House</div>
+                </div>
+                <div class="project">
+                    <img src="https://www.w3schools.com/w3images/house3.jpg" alt="project6">
+                    <div class="projectname">Brick House</div>
+                </div>
+                <div class="project">
+                    <img src="https://www.w3schools.com/w3images/house4.jpg" alt="project7">
+                    <div class="projectname">Renovated House</div>
+                </div>
+                <div class="project">
+                    <img src="https://www.w3schools.com/w3images/house3.jpg" alt="project8">
+                    <div class="projectname">Barn House</div>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="about">
+            <h2>About</h2>
+            <div class="projectline">
+                <hr>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="aboutcontainer">
+                <div class="profile">
+                    <img src="https://www.w3schools.com/w3images/team2.jpg" alt="profile" class="profileimage">
+                    <div class="profileinfo">
+                        <h3>John Doe</h3>
+                        
+                        <div class="profiletitle">CEO & Founder</div>
+                        <br>
+                        <div class="profiledescription">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                     <br>
+                        <button class="Contactbutton">Contact</button>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <img src="https://www.w3schools.com/w3images/team1.jpg" alt="profile" class="profileimage">
+                    <div class="profileinfo">
+                        <h3>Jane Doe</h3>
+                    
+                        <div class="profiletitle">Architect</div>
+                        <br>
+                        <div class="profiledescription">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                     <br>
+                        <button class="Contactbutton">Contact</button>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <img src="https://www.w3schools.com/w3images/team3.jpg" alt="profile" class="profileimage">
+                    <div class="profileinfo">
+                        <h3>Mike Ross</h3>
+                        
+                        <div class="profiletitle">Architect</div>
+                        <br>
+                        <div class="profiledescription">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                      <br>
+                        <button class="Contactbutton">Contact</button>
+                    </div>
+                </div>
+            
+
+            <div class="profile">
+                <img src="https://www.w3schools.com/w3images/team4.jpg" alt="profile" class="profileimage">
+                <div class="profileinfo">
+                    <h3>Dan Star</h3>
+
+                    <div class="profiletitle">Architect</div>
+                    <br>
+                    <div class="profiledescription">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                  <br>
+                    <button class="Contactbutton">Contact</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        </section>
+        <section class="contactsection" id="contact">
+            <h2>Contact</h2>
+            <div class="projectline">
+                <hr>
+            </div>
+            <p>Let's get in touch and talk about your next project.</p>
+            <form action="#" method="post" class="contactm">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="text" name="email" placeholder="Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="comment" placeholder="Comment" rows="4" required></textarea>
+                <button class="sendbutton">SEND MESSAGE</button>
+            </form>
+        </section>
+        <br>
+        <br>
+        <img src="https://www.w3schools.com/w3images/map.jpg" id="img">
+        <footer class="footer">
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp">W3.CSS</a></p>
+        
+        </footer>
+        <h1>this is modified</h1>
+</body>
+</html>
