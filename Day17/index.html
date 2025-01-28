@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+    .class1,.class2,.class3,.class4{
+        display: inline;
+        position: absolute;
+    }
+    .class1{
+        left: 20%;
+    }
+    .class2{
+        left: 40%;
+    }
+    .class3{
+        left: 60%;
+    }
+    .class4{
+        left: 80%;
+    }
+    .class1:hover~img{
+    transition: all 2s;
+    transform: translate(100px,100px);
+}
+.class2:hover~img{
+    transition: all 2s;
+    transform: scale(1.5);
+}
+.class3:hover~img{
+    transition: all 2s;
+    transform: rotate(180deg);
+}
+.class4:hover~img{
+    transition: all 2s;
+    transform: skew(20deg,20deg);
+}
+img{
+    margin-top: 20%;
+}
+div{
+    padding: 20px;
+}
+</style>
+<body>
+    <div class="class1">Transform</div>
+    <div class="class2">Scale</div>
+    <div class="class3">Rotate</div>
+    <div class="class4">Skew</div>
+    <img src="https://www.shutterstock.com/image-photo/calm-weather-on-sea-ocean-600nw-2212935531.jpg" alt="" height="200px" width="300px">
+</body>
+</html>
